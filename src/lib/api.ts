@@ -16,7 +16,7 @@ async function request(path: string, options?: RequestInit) {
 
 export const api = {
   register: (data: { name: string; email: string; password: string; phone?: string }) =>
-    request("/auth/register", { method: "POST", body: JSON.stringify(data) }),
+    request("/auth/register", { method: "POST", body: JSON.stringify({ ...data, role: "citizen" }) }),
 
   login: async (data: { email: string; password: string }) => {
     const token = localStorage.getItem("access_token");
