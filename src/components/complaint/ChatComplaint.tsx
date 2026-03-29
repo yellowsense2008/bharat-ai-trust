@@ -129,6 +129,7 @@ export function ChatComplaint() {
           amount: data.amount || data.complaint?.amount || "",
           description: data.description || data.complaint?.description || "",
         });
+        setShowSuccess(true);
       }
     } catch {
       setMessages((prev) => [
