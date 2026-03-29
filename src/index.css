@@ -90,3 +90,31 @@
     font-variant-numeric: tabular-nums;
   }
 }
+
+/* Typing indicator dots */
+@keyframes typing-bounce {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30% { transform: translateY(-6px); opacity: 1; }
+}
+.typing-dot {
+  animation: typing-bounce 1.2s ease-in-out infinite;
+}
+
+/* Mic pulse ring */
+@keyframes mic-pulse {
+  0% { box-shadow: 0 0 0 0 hsl(var(--destructive) / 0.5); }
+  70% { box-shadow: 0 0 0 12px hsl(var(--destructive) / 0); }
+  100% { box-shadow: 0 0 0 0 hsl(var(--destructive) / 0); }
+}
+.mic-pulse-ring {
+  animation: mic-pulse 1.5s ease-out infinite;
+}
+
+/* Waveform bars */
+@keyframes waveform {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
+.waveform-bar {
+  animation: waveform 0.8s ease-in-out infinite;
+}
