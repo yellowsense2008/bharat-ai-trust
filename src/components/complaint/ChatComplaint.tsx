@@ -155,10 +155,19 @@ export function ChatComplaint() {
     }
   };
 
+  const handleFileAnother = () => {
+    setShowSuccess(false);
+    setCompleted(false);
+    setComplaint(null);
+    setMessages([]);
+    setInput("");
+  };
+
   const micDisabled = loading || voiceState === "processing" || completed;
 
   return (
-    <div className="flex flex-col flex-1 min-h-0">
+    <div className="relative flex flex-col flex-1 min-h-0">
+      <SuccessOverlay visible={showSuccess} complaint={complaint} onFileAnother={handleFileAnother} />
       <div ref={scrollRef} className="flex-1 overflow-y-auto space-y-3 pb-4 min-h-0 px-1">
         {messages.length === 0 && !loading && (
           <motion.div
