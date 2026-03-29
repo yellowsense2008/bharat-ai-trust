@@ -68,6 +68,7 @@ export function ChatComplaint() {
   const [completed, setCompleted] = useState(false);
   const [complaint, setComplaint] = useState<ComplaintResult | null>(null);
   const [showSpeaking, setShowSpeaking] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
