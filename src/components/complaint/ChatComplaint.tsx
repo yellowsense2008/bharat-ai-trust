@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send, CheckCircle, Loader2, Mic, MicOff, Volume2 } from "lucide-react";
+import { SuccessOverlay } from "./SuccessOverlay";
 import { useEasyMode } from "@/contexts/EasyModeContext";
 import { useVoiceRecognition } from "./useVoiceRecognition";
 
